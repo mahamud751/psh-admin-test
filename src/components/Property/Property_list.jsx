@@ -35,7 +35,7 @@ const Property_list = (props) => {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          "https://api.psh.com.bd/api/category",
+          "https://psh-server-test.onrender.com/api/category",
           {
             mode: "cors",
           }
@@ -56,9 +56,12 @@ const Property_list = (props) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get("https://api.psh.com.bd/api/branch", {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch",
+          {
+            mode: "cors",
+          }
+        );
         const categoryMap = {};
         data.forEach((category) => {
           categoryMap[category._id] = category.name;
@@ -75,7 +78,7 @@ const Property_list = (props) => {
   // Get Propertys
 
   const { isLoading, refetch } = useQuery([data, branch], () =>
-    fetch(`https://api.psh.com.bd/api/property`, {
+    fetch(`https://psh-server-test.onrender.com/api/property`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -242,7 +245,7 @@ const Property_list = (props) => {
   //   const getData = async () => {
   //     try {
   //       const { data } = await axios.get(
-  //         `https://api.psh.com.bd/api/property`,
+  //         `https://psh-server-test.onrender.com/api/property`,
   //         {
   //           mode: "cors",
   //         }
@@ -262,7 +265,7 @@ const Property_list = (props) => {
   const handleCategory = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/property/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/property/${id}`;
       fetch(url, {
         method: "DELETE",
       })

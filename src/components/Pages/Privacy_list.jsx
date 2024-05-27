@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Privacy_list = () => {
   const [data, setData] = useState();
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/privacy`, {
+    fetch(`https://psh-server-test.onrender.com/api/privacy`, {
       method: "GET",
     })
       .then((res) => res.json())

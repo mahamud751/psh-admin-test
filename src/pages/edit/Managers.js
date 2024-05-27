@@ -12,7 +12,9 @@ const Managers = ({ data }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/branch");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch"
+        );
         setCategories(response.data);
       } catch (error) {
         console.log(error);
@@ -47,7 +49,7 @@ const Managers = ({ data }) => {
       };
 
       await axios.patch(
-        `https://api.psh.com.bd/api/users/admin/${_id}`,
+        `https://psh-server-test.onrender.com/api/users/admin/${_id}`,
         product
       );
       MySwal.fire("Good job!", "successfully edited", "success");

@@ -17,9 +17,12 @@ import EventUpdate from "../../pages/edit/EventUpdate";
 const Event_list = () => {
   const MySwal = withReactContent(Swal);
   const { data, refetch, error } = useQuery("eventData", async () => {
-    const response = await axios.get("https://api.psh.com.bd/api/event", {
-      mode: "cors",
-    });
+    const response = await axios.get(
+      "https://psh-server-test.onrender.com/api/event",
+      {
+        mode: "cors",
+      }
+    );
     return response.data;
   });
 
@@ -133,7 +136,7 @@ const Event_list = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/event/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/event/${id}`;
       fetch(url, {
         method: "DELETE",
       })

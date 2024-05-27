@@ -18,7 +18,7 @@ const UpdateAdjustment = ({ data, refetch }) => {
     };
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/adjustment/${data._id}`,
+        `https://psh-server-test.onrender.com/api/adjustment/${data._id}`,
         adjustment,
         {
           headers: {

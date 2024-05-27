@@ -149,7 +149,7 @@ const UpdateTransaction = ({
 
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/transaction/${data?._id}`,
+        `https://psh-server-test.onrender.com/api/transaction/${data?._id}`,
         receivedPayment,
         {
           headers: {

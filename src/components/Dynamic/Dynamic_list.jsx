@@ -110,9 +110,12 @@ const Dynamic_list = (props) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`https://api.psh.com.bd/api/dynamic`, {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          `https://psh-server-test.onrender.com/api/dynamic`,
+          {
+            mode: "cors",
+          }
+        );
         setData(data);
       } catch (error) {
         console.log(error);
@@ -126,7 +129,7 @@ const Dynamic_list = (props) => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/dynamic/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/dynamic/${id}`;
       fetch(url, {
         method: "DELETE",
       })

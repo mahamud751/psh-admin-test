@@ -31,7 +31,7 @@ const ImageViewer = ({ data }) => {
               <div className="col-lg-3 mb-3">
                 <div>
                   <img
-                    src={`https://api.psh.com.bd/${data?.image}`}
+                    src={`https://psh-server-test.onrender.com/${data?.image}`}
                     alt=""
                     style={{ width: "400px" }}
                   />
@@ -40,7 +40,7 @@ const ImageViewer = ({ data }) => {
               <div className="col-lg-3">
                 <div>
                   <img
-                    src={`https://api.psh.com.bd/${data?.gardianImg}`}
+                    src={`https://psh-server-test.onrender.com/${data?.gardianImg}`}
                     alt=""
                     style={{ width: "400px" }}
                   />

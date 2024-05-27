@@ -47,7 +47,10 @@ const Banner = ({ data }) => {
         photos: list,
       };
 
-      await axios.put(`https://api.psh.com.bd/api/banner/${_id}`, product);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/banner/${_id}`,
+        product
+      );
       MySwal.fire("Good job!", "successfully edited", "success");
     } catch (err) {
       MySwal.fire("Something Error Found.", "warning");

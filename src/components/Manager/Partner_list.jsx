@@ -26,9 +26,12 @@ const Partner_list = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get("https://api.psh.com.bd/api/branch", {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch",
+          {
+            mode: "cors",
+          }
+        );
         const categoryMap = {};
         data.forEach((category) => {
           categoryMap[category._id] = category.name;
@@ -145,8 +148,8 @@ const Partner_list = () => {
     const fetchData = async () => {
       try {
         const [usersResponse, branchesResponse] = await Promise.all([
-          axios.get("https://api.psh.com.bd/api/users"),
-          axios.get("https://api.psh.com.bd/api/branch"),
+          axios.get("https://psh-server-test.onrender.com/api/users"),
+          axios.get("https://psh-server-test.onrender.com/api/branch"),
         ]);
 
         setData(usersResponse.data);
@@ -166,7 +169,7 @@ const Partner_list = () => {
   const handleCategory = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/users/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/users/${id}`;
       fetch(url, {
         method: "DELETE",
       })

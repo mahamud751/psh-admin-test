@@ -19,7 +19,7 @@ const AddSubscription = ({ setShow, show, charge, refetch }) => {
 
     try {
       const response = await axios.post(
-        `https://api.psh.com.bd/api/subscription`,
+        `https://psh-server-test.onrender.com/api/subscription`,
         subcripitonData,
         {
           headers: {

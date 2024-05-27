@@ -170,7 +170,7 @@ const AdjustmentList = () => {
   });
   // Get All Adjustment
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/adjustment`, {
+    fetch(`https://psh-server-test.onrender.com/api/adjustment`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -188,7 +188,7 @@ const AdjustmentList = () => {
 
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/adjustment/${adjustment._id}`,
+        `https://psh-server-test.onrender.com/api/adjustment/${adjustment._id}`,
         adjustmentData,
         {
           headers: {
@@ -209,7 +209,7 @@ const AdjustmentList = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/adjustment/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/adjustment/${id}`;
       fetch(url, {
         method: "DELETE",
       })

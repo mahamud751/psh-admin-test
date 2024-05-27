@@ -49,7 +49,10 @@ const Add_Branch = () => {
         photos: list,
       };
 
-      await axios.post("https://api.psh.com.bd/api/branch", branch);
+      await axios.post(
+        "https://psh-server-test.onrender.com/api/branch",
+        branch
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

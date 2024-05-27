@@ -38,7 +38,7 @@ const SubscriptionStatusUpdate = ({ data, refetch }) => {
       };
 
       await axios.patch(
-        `https://api.psh.com.bd/api/subscriptionOrder/${_id}`,
+        `https://psh-server-test.onrender.com/api/subscriptionOrder/${_id}`,
         updatedStatus
       );
       MySwal.fire("Updated", "success");

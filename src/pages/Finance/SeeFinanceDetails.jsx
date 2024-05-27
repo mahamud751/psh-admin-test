@@ -119,7 +119,7 @@ const SeeFinanceDetails = ({ data }) => {
                   </label>
                   <div>
                     <img
-                      src={`https://api.psh.com.bd/${data?.image}`}
+                      src={`https://psh-server-test.onrender.com/${data?.image}`}
                       alt=""
                       style={{ width: "100px" }}
                     />

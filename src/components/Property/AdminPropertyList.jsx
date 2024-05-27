@@ -40,9 +40,12 @@ const AdminPropertyList = (props) => {
 
   const { refetch: categoryList } = useQuery(["categoryList"], async () => {
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/category`, {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/category`,
+        {
+          mode: "cors",
+        }
+      );
 
       setCategories(response.data);
     } catch (error) {
@@ -51,9 +54,12 @@ const AdminPropertyList = (props) => {
   });
   const { refetch: branchList } = useQuery(["branchList"], async () => {
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/branch`, {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/branch`,
+        {
+          mode: "cors",
+        }
+      );
 
       setBranches(response.data);
     } catch (error) {
@@ -64,9 +70,12 @@ const AdminPropertyList = (props) => {
   // Get Properties
   const { refetch } = useQuery(["propertyList"], async () => {
     try {
-      const response = await axios.get("https://api.psh.com.bd/api/property", {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        "https://psh-server-test.onrender.com/api/property",
+        {
+          mode: "cors",
+        }
+      );
 
       setData(response.data); // Return data from the async function
     } catch (error) {
@@ -82,14 +91,17 @@ const AdminPropertyList = (props) => {
     setIsFilter(true);
 
     try {
-      const response = await axios.get("https://api.psh.com.bd/api/property", {
-        params: {
-          sCategory: selectCategory !== "All" ? selectCategory : undefined,
-          sBranch: selectBranch !== "All" ? selectBranch : undefined,
-          roomNumber: roomNumber.toUpperCase(),
-        },
-        mode: "cors",
-      });
+      const response = await axios.get(
+        "https://psh-server-test.onrender.com/api/property",
+        {
+          params: {
+            sCategory: selectCategory !== "All" ? selectCategory : undefined,
+            sBranch: selectBranch !== "All" ? selectBranch : undefined,
+            roomNumber: roomNumber.toUpperCase(),
+          },
+          mode: "cors",
+        }
+      );
 
       setFilterData(response.data);
     } catch (error) {
@@ -303,7 +315,7 @@ const AdminPropertyList = (props) => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/property/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/property/${id}`;
       fetch(url, {
         method: "DELETE",
       })

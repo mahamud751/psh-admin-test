@@ -115,7 +115,7 @@ const Recommended_list = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.psh.com.bd/api/recommended`,
+          `https://psh-server-test.onrender.com/api/recommended`,
           {
             mode: "cors",
           }
@@ -133,7 +133,7 @@ const Recommended_list = () => {
   const handleCategory = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/recommended/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/recommended/${id}`;
       try {
         const response = await axios.delete(url);
         const { deletedCount } = response.data;

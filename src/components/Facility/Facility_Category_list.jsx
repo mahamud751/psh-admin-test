@@ -112,7 +112,7 @@ const Facility_Category_list = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.psh.com.bd/api/category`,
+          `https://psh-server-test.onrender.com/api/category`,
           {
             mode: "cors",
           }
@@ -129,7 +129,7 @@ const Facility_Category_list = () => {
   const handleCategory = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/category/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/category/${id}`;
       fetch(url, {
         method: "DELETE",
       })

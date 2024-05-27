@@ -36,7 +36,9 @@ const PropertyUpdate2 = ({ data, refetch }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/category");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/category"
+        );
         setCategories(response.data);
       } catch (error) {
         console.log(error);
@@ -65,7 +67,7 @@ const PropertyUpdate2 = ({ data, refetch }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.psh.com.bd/api/facilityCategory"
+          "https://psh-server-test.onrender.com/api/facilityCategory"
         );
         setFacilities(response.data);
       } catch (error) {
@@ -79,7 +81,7 @@ const PropertyUpdate2 = ({ data, refetch }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.psh.com.bd/api/commonfacility"
+          "https://psh-server-test.onrender.com/api/commonfacility"
         );
         setCommonaFacilities(response.data);
       } catch (error) {
@@ -251,7 +253,7 @@ const PropertyUpdate2 = ({ data, refetch }) => {
       }
 
       await axios.put(
-        `https://api.psh.com.bd/api/property/${data?._id}`,
+        `https://psh-server-test.onrender.com/api/property/${data?._id}`,
         product
       );
       MySwal.fire("successfully Update", "success");

@@ -113,9 +113,12 @@ const Branch_list = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`https://api.psh.com.bd/api/branch`, {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          `https://psh-server-test.onrender.com/api/branch`,
+          {
+            mode: "cors",
+          }
+        );
         setData(data);
       } catch (error) {
         console.log(error);
@@ -128,7 +131,7 @@ const Branch_list = () => {
   const handleBranch = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/branch/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/branch/${id}`;
       fetch(url, {
         method: "DELETE",
       })

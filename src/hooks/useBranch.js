@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const useBranch = () => {
   const [allBranch, setAllBranch] = useState([]);
   const { isLoading, refetch } = useQuery([allBranch], () =>
-    fetch(`https://api.psh.com.bd/api/branch`, {
+    fetch(`https://psh-server-test.onrender.com/api/branch`, {
       method: "GET",
     })
       .then((res) => res.json())

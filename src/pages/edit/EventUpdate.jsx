@@ -21,7 +21,7 @@ const EventUpdate = ({ data, refetch }) => {
   };
   const [details, setDetails] = useState("");
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/event/${data._id}`)
+    fetch(`https://psh-server-test.onrender.com/api/event/${data._id}`)
       .then((res) => res.json())
       .then((data) => setDataAll(data));
   }, [data._id, details]);
@@ -34,7 +34,10 @@ const EventUpdate = ({ data, refetch }) => {
       ...user,
     };
     try {
-      await axios.put(`https://api.psh.com.bd/api/event/${data._id}`, data2);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/event/${data._id}`,
+        data2
+      );
       MySwal.fire("Good job!", "successfully update", "success");
       formRef.current.reset();
       refetch();

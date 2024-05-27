@@ -17,7 +17,7 @@ const RoomVisit = () => {
   const MySwal = withReactContent(Swal);
   const [data, setData] = useState([]);
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/requestVisit`, {
+    fetch(`https://psh-server-test.onrender.com/api/requestVisit`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -115,7 +115,7 @@ const RoomVisit = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/requestVisit/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/requestVisit/${id}`;
       fetch(url, {
         method: "DELETE",
       })

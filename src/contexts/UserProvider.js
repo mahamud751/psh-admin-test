@@ -23,7 +23,7 @@ export const UserProvider = ({ children }) => {
     try {
       // Make your API call here to login the user using Axios
       const response = await axios.post(
-        "https://api.psh.com.bd/api/users/login",
+        "https://psh-server-test.onrender.com/api/users/login",
         { email, password }
       );
 
@@ -50,16 +50,19 @@ export const UserProvider = ({ children }) => {
     branch
   ) => {
     try {
-      const response = await axios.post("https://api.psh.com.bd/api/users", {
-        firstName,
-        lastName,
-        address,
-        email,
-        phone,
-        password,
-        role,
-        branch,
-      });
+      const response = await axios.post(
+        "https://psh-server-test.onrender.com/api/users",
+        {
+          firstName,
+          lastName,
+          address,
+          email,
+          phone,
+          password,
+          role,
+          branch,
+        }
+      );
 
       if (response.status === 200) {
         const { data } = response;

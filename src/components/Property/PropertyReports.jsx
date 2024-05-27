@@ -51,7 +51,9 @@ const PropertyReports = (props) => {
     ["categoryList"],
     async () => {
       try {
-        const response = await axios.get(`https://api.psh.com.bd/api/category`);
+        const response = await axios.get(
+          `https://psh-server-test.onrender.com/api/category`
+        );
         setCategories(response.data);
       } catch (error) {
         console.error(error);
@@ -62,7 +64,9 @@ const PropertyReports = (props) => {
   // Fetch branches
   const { refetch: refetchBranches } = useQuery(["branchList"], async () => {
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/branch`);
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/branch`
+      );
       setBranches(response.data);
     } catch (error) {
       console.error(error);
@@ -80,7 +84,7 @@ const PropertyReports = (props) => {
           (user?.role === "manager" || user?.role === "partner")
         ) {
           response = await axios.get(
-            "https://api.psh.com.bd/api/property/booking-report",
+            "https://psh-server-test.onrender.com/api/property/booking-report",
             {
               params: {
                 branch: userBranch,
@@ -90,7 +94,7 @@ const PropertyReports = (props) => {
           );
         } else {
           response = await axios.get(
-            "https://api.psh.com.bd/api/property/booking-report",
+            "https://psh-server-test.onrender.com/api/property/booking-report",
             {
               mode: "cors",
             }
@@ -109,7 +113,7 @@ const PropertyReports = (props) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://api.psh.com.bd/api/property/booking-report",
+        "https://psh-server-test.onrender.com/api/property/booking-report",
         {
           params: {
             category: selectCategory,

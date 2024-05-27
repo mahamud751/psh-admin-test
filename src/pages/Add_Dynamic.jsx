@@ -22,7 +22,10 @@ const Add_Dynamic = () => {
     };
 
     try {
-      await axios.post("https://api.psh.com.bd/api/dynamic", data2);
+      await axios.post(
+        "https://psh-server-test.onrender.com/api/dynamic",
+        data2
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

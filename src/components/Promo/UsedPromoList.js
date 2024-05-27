@@ -25,7 +25,7 @@ const UserManage = () => {
     }
   }, [data]);
   const { isLoading, refetch } = useQuery([data], () =>
-    fetch(`https://api.psh.com.bd/api/users`, {
+    fetch(`https://psh-server-test.onrender.com/api/users`, {
       method: "GET",
     })
       .then((res) => res.json())

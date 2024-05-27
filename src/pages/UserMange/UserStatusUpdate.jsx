@@ -24,7 +24,7 @@ const UserStatusUpdate = ({ data, refetch }) => {
 
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/users/${_id}`,
+        `https://psh-server-test.onrender.com/api/users/${_id}`,
 
         updatedStatus
       );

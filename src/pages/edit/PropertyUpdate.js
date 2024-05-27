@@ -44,7 +44,9 @@ const PropertyUpdate = ({ data }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/category");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/category"
+        );
         setCategories(response.data);
       } catch (error) {
         console.log(error);
@@ -57,7 +59,9 @@ const PropertyUpdate = ({ data }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/branch");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch"
+        );
         setBranch(response.data);
       } catch (error) {
         console.log(error);
@@ -70,7 +74,7 @@ const PropertyUpdate = ({ data }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.psh.com.bd/api/facilityCategory"
+          "https://psh-server-test.onrender.com/api/facilityCategory"
         );
         setFacilities(response.data);
       } catch (error) {
@@ -84,7 +88,7 @@ const PropertyUpdate = ({ data }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.psh.com.bd/api/commonfacility"
+          "https://psh-server-test.onrender.com/api/commonfacility"
         );
         setCommonaFacilities(response.data);
       } catch (error) {
@@ -240,7 +244,10 @@ const PropertyUpdate = ({ data }) => {
         })),
       };
 
-      await axios.put(`https://api.psh.com.bd/api/property/${_id}`, product);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/property/${_id}`,
+        product
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

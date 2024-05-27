@@ -34,7 +34,10 @@ const Add_Category = () => {
         photos: list,
       };
 
-      await axios.post("https://api.psh.com.bd/api/category", product);
+      await axios.post(
+        "https://psh-server-test.onrender.com/api/category",
+        product
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

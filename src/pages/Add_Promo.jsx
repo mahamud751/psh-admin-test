@@ -61,7 +61,7 @@ const Add_Promo = () => {
         homePageCover: homePageCover,
       };
 
-      await axios.post("https://api.psh.com.bd/api/promo", promo);
+      await axios.post("https://psh-server-test.onrender.com/api/promo", promo);
       MySwal.fire("Good job!", "successfully added", "success");
     } catch (err) {
       MySwal.fire("Something Error Found.", "warning");

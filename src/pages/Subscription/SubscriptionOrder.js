@@ -28,7 +28,7 @@ const SubscriptionOrder = (props) => {
   const { refetch } = useQuery(["data"], async () => {
     try {
       const response = await fetch(
-        `https://api.psh.com.bd/api/subscriptionOrder`,
+        `https://psh-server-test.onrender.com/api/subscriptionOrder`,
         {
           method: "GET",
         }

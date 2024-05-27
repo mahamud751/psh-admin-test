@@ -23,7 +23,7 @@ const Finance = () => {
   const [data, setData] = useState([]);
 
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/extraForm`, {
+    fetch(`https://psh-server-test.onrender.com/api/extraForm`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -238,7 +238,7 @@ const Finance = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/extraForm/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/extraForm/${id}`;
       fetch(url, {
         method: "DELETE",
       })

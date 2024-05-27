@@ -34,7 +34,7 @@ const PropertyStatusUpdate = ({ data, refetch, setStatusShow, statusShow }) => {
       };
 
       await axios.put(
-        `https://api.psh.com.bd/api/property/${_id}`,
+        `https://psh-server-test.onrender.com/api/property/${_id}`,
         updatedStatus
       );
       MySwal.fire("Updated", "success");

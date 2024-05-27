@@ -24,7 +24,7 @@ const SubscriptionUpdate = ({
 
     try {
       const response = await axios.patch(
-        `https://api.psh.com.bd/api/subscription/${subscription?._id}`,
+        `https://psh-server-test.onrender.com/api/subscription/${subscription?._id}`,
         subcripitonData,
         {
           headers: {

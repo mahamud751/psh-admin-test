@@ -17,7 +17,7 @@ const Accept = ({ contact, refetch }) => {
 
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/contact/${contact._id}`,
+        `https://psh-server-test.onrender.com/api/contact/${contact._id}`,
         contactUsData,
         {
           headers: {

@@ -38,7 +38,7 @@ const TransactionStatusUpdate = ({ data, refetch }) => {
       };
 
       await axios.patch(
-        `https://api.psh.com.bd/api/transaction/${_id}`,
+        `https://psh-server-test.onrender.com/api/transaction/${_id}`,
         updatedStatus
       );
       MySwal.fire("Updated", "success");

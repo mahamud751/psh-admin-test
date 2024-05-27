@@ -8,7 +8,7 @@ const Terms_list = () => {
   const [data, setData] = useState();
 
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/terms`, {
+    fetch(`https://psh-server-test.onrender.com/api/terms`, {
       method: "GET",
     })
       .then((res) => res.json())

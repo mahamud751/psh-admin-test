@@ -17,7 +17,7 @@ const RoomRent = () => {
   const MySwal = withReactContent(Swal);
   const [data, setData] = useState([]);
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/requestRent`, {
+    fetch(`https://psh-server-test.onrender.com/api/requestRent`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -198,7 +198,7 @@ const RoomRent = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/requestRent/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/requestRent/${id}`;
       fetch(url, {
         method: "DELETE",
       })

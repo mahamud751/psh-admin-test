@@ -20,9 +20,12 @@ const Admin_issue_list = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get("https://api.psh.com.bd/api/branch", {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch",
+          {
+            mode: "cors",
+          }
+        );
         const categoryMap = {};
         data.forEach((category) => {
           categoryMap[category._id] = category.name;
@@ -124,9 +127,12 @@ const Admin_issue_list = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`https://api.psh.com.bd/api/issue`, {
-          mode: "cors",
-        });
+        const { data } = await axios.get(
+          `https://psh-server-test.onrender.com/api/issue`,
+          {
+            mode: "cors",
+          }
+        );
         setData(data);
       } catch (error) {
         console.log(error);
@@ -139,7 +145,7 @@ const Admin_issue_list = () => {
   const handleCategory = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/issue/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/issue/${id}`;
       fetch(url, {
         method: "DELETE",
       })

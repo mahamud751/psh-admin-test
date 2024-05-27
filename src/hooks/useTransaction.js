@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const useTransaction = () => {
   const [transactions, setTransaction] = useState([]);
   const { isLoading, refetch } = useQuery([transactions], () =>
-    fetch(`https://api.psh.com.bd/api/transaction`, {
+    fetch(`https://psh-server-test.onrender.com/api/transaction`, {
       method: "GET",
     })
       .then((res) => res.json())

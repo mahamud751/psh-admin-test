@@ -80,7 +80,7 @@ const TransactionManager = () => {
 
   // Get All Branch
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/branch`)
+    fetch(`https://psh-server-test.onrender.com/api/branch`)
       .then((res) => res.json())
       .then((data) => setAllBranch(data));
   }, []);
@@ -91,7 +91,7 @@ const TransactionManager = () => {
     async () => {
       try {
         const response = await fetch(
-          `https://api.psh.com.bd/api/transaction?branch=${findManagerBranch?._id}`,
+          `https://psh-server-test.onrender.com/api/transaction?branch=${findManagerBranch?._id}`,
           {
             method: "GET",
           }
@@ -139,7 +139,7 @@ const TransactionManager = () => {
 
     try {
       const response = await fetch(
-        `https://api.psh.com.bd/api/transaction?orderId=${orderId}&userId=${bookingUserId}&fromDate=${fromDate}&toDate=${toDate}&branch=${branch}&paymentType=${payementType}&transactionId=${transactionId}`,
+        `https://psh-server-test.onrender.com/api/transaction?orderId=${orderId}&userId=${bookingUserId}&fromDate=${fromDate}&toDate=${toDate}&branch=${branch}&paymentType=${payementType}&transactionId=${transactionId}`,
         {
           method: "GET",
         }
@@ -372,7 +372,7 @@ const TransactionManager = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/transaction/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/transaction/${id}`;
       fetch(url, {
         method: "DELETE",
       })

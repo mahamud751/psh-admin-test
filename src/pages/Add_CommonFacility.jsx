@@ -36,7 +36,10 @@ const Add_CommonFacility = () => {
         photos: list,
       };
 
-      await axios.post("https://api.psh.com.bd/api/commonfacility", product);
+      await axios.post(
+        "https://psh-server-test.onrender.com/api/commonfacility",
+        product
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

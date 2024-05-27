@@ -51,9 +51,12 @@ const TransactionAdmin = () => {
   // Get All Transactions
   const { refetch } = useQuery([data, allBranch?.length], async () => {
     try {
-      const response = await fetch(`https://api.psh.com.bd/api/transaction`, {
-        method: "GET",
-      });
+      const response = await fetch(
+        `https://psh-server-test.onrender.com/api/transaction`,
+        {
+          method: "GET",
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network Error");
@@ -68,7 +71,7 @@ const TransactionAdmin = () => {
 
   // Get All Branch
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/branch`)
+    fetch(`https://psh-server-test.onrender.com/api/branch`)
       .then((res) => res.json())
       .then((data) => setAllBranch(data));
   }, []);
@@ -131,7 +134,7 @@ const TransactionAdmin = () => {
 
     try {
       const response = await axios.get(
-        `https://api.psh.com.bd/api/transaction`,
+        `https://psh-server-test.onrender.com/api/transaction`,
         {
           params: {
             orderId: orderId,
@@ -383,7 +386,7 @@ const TransactionAdmin = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/transaction/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/transaction/${id}`;
       fetch(url, {
         method: "DELETE",
       })

@@ -139,7 +139,7 @@ const ContactUs = () => {
   });
   // Get All Adjustment
   const { isLoading, refetch } = useQuery([], () =>
-    fetch(`https://api.psh.com.bd/api/contact`, {
+    fetch(`https://psh-server-test.onrender.com/api/contact`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -153,7 +153,7 @@ const ContactUs = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/contact/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/contact/${id}`;
       fetch(url, {
         method: "DELETE",
       })

@@ -13,7 +13,9 @@ const Issue = ({ data }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/branch");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch"
+        );
         setCategories(response.data);
       } catch (error) {
         console.log(error);
@@ -52,7 +54,10 @@ const Issue = ({ data }) => {
         ...newPost,
       };
 
-      await axios.put(`https://api.psh.com.bd/api/issue/${_id}`, product);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/issue/${_id}`,
+        product
+      );
       MySwal.fire("Good job!", "successfully edited", "success");
     } catch (err) {
       MySwal.fire("Something Error Found.", "warning");

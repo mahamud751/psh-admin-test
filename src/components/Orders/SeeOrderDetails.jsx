@@ -48,7 +48,9 @@ const SeeOrderDetails = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/branch");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch"
+        );
         SetBranchs(response.data);
       } catch (error) {
         console.log(error);
@@ -181,7 +183,7 @@ const SeeOrderDetails = ({
                       data-bs-target={`#image_view${data?._id}`}
                     >
                       <img
-                        src={`https://api.psh.com.bd/${data?.image}`}
+                        src={`https://psh-server-test.onrender.com/${data?.image}`}
                         alt=""
                         style={{ width: "100px" }}
                       />
@@ -201,7 +203,7 @@ const SeeOrderDetails = ({
                       data-bs-target={`#image_view${data?._id}`}
                     >
                       <img
-                        src={`https://api.psh.com.bd/${data?.gardianImg}`}
+                        src={`https://psh-server-test.onrender.com/${data?.gardianImg}`}
                         alt=""
                         style={{ width: "100px" }}
                       />

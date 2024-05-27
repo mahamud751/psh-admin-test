@@ -21,7 +21,7 @@ const ExtraChargeEditModal = ({ setShow, show, charge, refetch }) => {
 
     try {
       const response = await axios.put(
-        `https://api.psh.com.bd/api/extraCharge/${charge._id}`,
+        `https://psh-server-test.onrender.com/api/extraCharge/${charge._id}`,
         updateExtraCharge,
         {
           headers: {

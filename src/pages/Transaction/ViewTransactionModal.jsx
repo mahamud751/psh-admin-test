@@ -12,7 +12,9 @@ const ViewTransactionModal = ({ data, bookings }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.psh.com.bd/api/branch");
+        const response = await axios.get(
+          "https://psh-server-test.onrender.com/api/branch"
+        );
         SetBranchs(response.data);
       } catch (error) {
         console.log(error);

@@ -67,7 +67,7 @@ const Promo = ({ data, refetch }) => {
       };
 
       await axios.put(
-        `https://api.psh.com.bd/api/promo/${data._id}`,
+        `https://psh-server-test.onrender.com/api/promo/${data._id}`,
         updatePromo
       );
       MySwal.fire("Good job!", "successfully Updated", "success");

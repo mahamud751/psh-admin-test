@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const useBooking = () => {
   const [bookings, setBookings] = useState([]);
   const { isLoading, refetch } = useQuery([bookings], () =>
-    fetch(`https://api.psh.com.bd/api/order`, {
+    fetch(`https://psh-server-test.onrender.com/api/order`, {
       method: "GET",
     })
       .then((res) => res.json())

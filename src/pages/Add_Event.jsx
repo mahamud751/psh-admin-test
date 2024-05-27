@@ -38,7 +38,10 @@ const Add_Event = () => {
         ...data2,
         photos: list,
       };
-      await axios.post("https://api.psh.com.bd/api/event", product);
+      await axios.post(
+        "https://psh-server-test.onrender.com/api/event",
+        product
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

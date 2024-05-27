@@ -80,7 +80,7 @@ const Payment = ({ data, refetch, isLoading }) => {
     handleClickCloseButton();
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/order/${data?._id}`,
+        `https://psh-server-test.onrender.com/api/order/${data?._id}`,
         receivedPayment,
         {
           headers: {
@@ -127,7 +127,7 @@ const Payment = ({ data, refetch, isLoading }) => {
     handleClickCloseButton();
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/order/${data._id}`,
+        `https://psh-server-test.onrender.com/api/order/${data._id}`,
         adjustment,
         {
           headers: {
@@ -179,7 +179,7 @@ const Payment = ({ data, refetch, isLoading }) => {
 
     try {
       await axios.patch(
-        `https://api.psh.com.bd/api/order/${data._id}`,
+        `https://psh-server-test.onrender.com/api/order/${data._id}`,
         reducePayment,
         {
           headers: {

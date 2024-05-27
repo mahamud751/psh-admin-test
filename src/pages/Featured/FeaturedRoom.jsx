@@ -39,9 +39,12 @@ const FeaturedRoom = (props) => {
 
   const { refetch: categoryList } = useQuery(["categoryList"], async () => {
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/category`, {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/category`,
+        {
+          mode: "cors",
+        }
+      );
 
       setCategories(response.data);
     } catch (error) {
@@ -50,9 +53,12 @@ const FeaturedRoom = (props) => {
   });
   const { refetch: branchList } = useQuery(["branchList"], async () => {
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/branch`, {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/branch`,
+        {
+          mode: "cors",
+        }
+      );
 
       setBranches(response.data);
     } catch (error) {
@@ -63,9 +69,12 @@ const FeaturedRoom = (props) => {
   // Get Properties
   const { refetch } = useQuery(["propertyList"], async () => {
     try {
-      const response = await axios.get("https://api.psh.com.bd/api/property", {
-        mode: "cors",
-      });
+      const response = await axios.get(
+        "https://psh-server-test.onrender.com/api/property",
+        {
+          mode: "cors",
+        }
+      );
 
       setData(response.data); // Return data from the async function
     } catch (error) {
@@ -79,14 +88,17 @@ const FeaturedRoom = (props) => {
     setIsFilter(true);
 
     try {
-      const response = await axios.get("https://api.psh.com.bd/api/property", {
-        params: {
-          sCategory: selectCategory !== "All" ? selectCategory : undefined,
-          sBranch: selectBranch !== "All" ? selectBranch : undefined,
-          roomNumber: roomNumber.toUpperCase(),
-        },
-        mode: "cors",
-      });
+      const response = await axios.get(
+        "https://psh-server-test.onrender.com/api/property",
+        {
+          params: {
+            sCategory: selectCategory !== "All" ? selectCategory : undefined,
+            sBranch: selectBranch !== "All" ? selectBranch : undefined,
+            roomNumber: roomNumber.toUpperCase(),
+          },
+          mode: "cors",
+        }
+      );
 
       setFilterData(response.data);
     } catch (error) {
@@ -120,7 +132,7 @@ const FeaturedRoom = (props) => {
 
     try {
       const response = await axios.patch(
-        `https://api.psh.com.bd/api/property/featured`,
+        `https://psh-server-test.onrender.com/api/property/featured`,
         updateFeatured
       );
       toast.success(response.data.message);

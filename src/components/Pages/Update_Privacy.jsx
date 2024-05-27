@@ -12,7 +12,7 @@ const Update_Privacy = () => {
 
   const [details, setDetails] = useState("");
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/privacy/${id}`)
+    fetch(`https://psh-server-test.onrender.com/api/privacy/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id, details]);
@@ -24,7 +24,10 @@ const Update_Privacy = () => {
       desc: details,
     };
     try {
-      await axios.put(`https://api.psh.com.bd/api/privacy/${id}`, data2);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/privacy/${id}`,
+        data2
+      );
       MySwal.fire("Good job!", "successfully added", "success");
       formRef.current.reset();
     } catch (err) {

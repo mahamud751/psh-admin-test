@@ -133,7 +133,7 @@ const LeasePropertyList = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.psh.com.bd/api/leaseproperty`,
+          `https://psh-server-test.onrender.com/api/leaseproperty`,
           {
             mode: "cors",
           }
@@ -150,7 +150,7 @@ const LeasePropertyList = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/leaseProperty/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/leaseProperty/${id}`;
       fetch(url, {
         method: "DELETE",
       })

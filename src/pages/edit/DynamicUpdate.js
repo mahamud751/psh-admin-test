@@ -21,7 +21,7 @@ const ProductUpdate = ({ data }) => {
   };
   const [details, setDetails] = useState("");
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/dynamic/${data._id}`)
+    fetch(`https://psh-server-test.onrender.com/api/dynamic/${data._id}`)
       .then((res) => res.json())
       .then((data) => setDataAll(data));
   }, [data._id, details]);
@@ -34,7 +34,10 @@ const ProductUpdate = ({ data }) => {
       ...user,
     };
     try {
-      await axios.put(`https://api.psh.com.bd/api/dynamic/${data._id}`, data2);
+      await axios.put(
+        `https://psh-server-test.onrender.com/api/dynamic/${data._id}`,
+        data2
+      );
       MySwal.fire("Good job!", "successfully update", "success");
       formRef.current.reset();
     } catch (err) {

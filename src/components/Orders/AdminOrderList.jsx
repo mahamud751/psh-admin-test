@@ -59,9 +59,12 @@ const AdminOrderList = () => {
     [data, extraCharge, allBranch?.length],
     async () => {
       try {
-        const response = await fetch(`https://api.psh.com.bd/api/order`, {
-          method: "GET",
-        });
+        const response = await fetch(
+          `https://psh-server-test.onrender.com/api/order`,
+          {
+            method: "GET",
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Network Error");
@@ -80,7 +83,7 @@ const AdminOrderList = () => {
 
   // Get All Branch
   useEffect(() => {
-    fetch(`https://api.psh.com.bd/api/branch`)
+    fetch(`https://psh-server-test.onrender.com/api/branch`)
       .then((res) => res.json())
       .then((data) => setAllBranch(data));
   }, []);
@@ -146,17 +149,20 @@ const AdminOrderList = () => {
       : "All";
 
     try {
-      const response = await axios.get(`https://api.psh.com.bd/api/order`, {
-        params: {
-          orderId: orderId,
-          userId: bookingUserId,
-          fromDate: fromDate,
-          toDate: toDate,
-          branch: branch,
-          paymentStatus: paymentStatus,
-          status: bookingStatus,
-        },
-      });
+      const response = await axios.get(
+        `https://psh-server-test.onrender.com/api/order`,
+        {
+          params: {
+            orderId: orderId,
+            userId: bookingUserId,
+            fromDate: fromDate,
+            toDate: toDate,
+            branch: branch,
+            paymentStatus: paymentStatus,
+            status: bookingStatus,
+          },
+        }
+      );
 
       if (!response.status === 200) {
         throw new Error("Network response was not ok");
@@ -465,7 +471,7 @@ const AdminOrderList = () => {
   const handleDelete = async (id) => {
     const confirmation = window.confirm("Are you Sure?");
     if (confirmation) {
-      const url = `https://api.psh.com.bd/api/order/${id}`;
+      const url = `https://psh-server-test.onrender.com/api/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })
