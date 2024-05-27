@@ -1,0 +1,26 @@
+.export_btn_main {
+  display: flex;
+  justify-content: end;
+}
+
+.export_btn {
+  width: 180px;
+}
+
+.card_div {
+  box-shadow: rgb(226, 230, 235) 0px 20px 30px -10px;
+  padding-bottom: 20px;
+
+  margin-left: 2px !important;
+}
+
+.seat-part {
+  font-size: 1.3rem !important;
+  background-color: #00bbb4;
+  color: white;
+  border-radius: 5px;
+}
+
+.profile_bg {
+  background: linear-gradient(to right top, #afe7d7, #b8dfd4);
+}

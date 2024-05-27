@@ -1,0 +1,31 @@
+#summary {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#summary p.collapse:not(.show) {
+    height: 22px !important;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin: 0;
+
+}
+
+#summary p.collapsing {
+    min-height: 42px !important;
+}
+
+#summary a.collapsed:after {
+    content: 'Read More';
+    color: #1BA643;
+
+}
+
+#summary a:not(.collapsed):after {
+    content: 'Read Less';
+    color: #1BA643;
+
+}

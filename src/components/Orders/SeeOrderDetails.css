@@ -1,0 +1,35 @@
+.modal-body p {
+  font-size: 1rem !important;
+}
+.modal-body label {
+  font-size: 1.1rem !important;
+}
+.react-datepicker__view-calendar-icon input {
+  padding: 0 !important;
+  padding-left: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* Date Update page Css */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: white !important;
+}
+
+.order-status {
+  cursor: pointer;
+}
+.update-date {
+  cursor: pointer;
+}
+.calcaulation span {
+  cursor: pointer;
+}
+.dmyActive {
+  background-color: #35b0a7;
+  color: white;
+}
+
+.delete-button:hover {
+  color: red;
+}

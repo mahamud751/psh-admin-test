@@ -1,0 +1,35 @@
+.college_h6 {
+  text-align: left;
+  font: normal normal 600 20px/30px Poppins;
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+  color: #0f0c1a;
+}
+
+.college_btn {
+  top: 127px;
+  left: 935px;
+  width: 119px;
+  height: 39px;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+  border: 1px solid #463196;
+  color: #463196;
+  border-radius: 5px;
+}
+
+.college_btn2 {
+  top: 127px;
+  left: 935px;
+  width: 119px;
+  height: 39px;
+  background: #1ba6430a 0% 0% no-repeat padding-box;
+  border: 1px solid #1ba643;
+  border-radius: 5px;
+  color: #1ba643;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,201 @@
+.wrapper .content-wrapper {
+  min-height: 0 !important;
+}
+.left_card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px;
+  margin-top: -30px;
+  width: 90%;
+  height: 600px;
+}
+
+.home_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.left_card_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_card_text {
+  text-decoration: none;
+  color: #9184c0;
+  font-weight: 600;
+}
+
+.side_menu {
+  color: #000000;
+}
+
+.content_title {
+  left: 447px;
+
+  text-align: left;
+  font: normal normal bold 20px/27px Recoleta;
+  letter-spacing: 0px;
+  color: #463196;
+  opacity: 1;
+}
+
+.content_text {
+  top: 541px;
+  left: 447px;
+  width: 829px;
+
+  /* UI Properties */
+  text-align: left;
+  font: normal normal normal 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #0f0c1a;
+  opacity: 1;
+}
+
+/* .menu_li {
+  top: 422px;
+  left: 602px;
+  width: 61px;
+  height: 21px;
+  text-align: left;
+  font: normal normal medium 15px/23px Poppins;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: rgb(207, 17, 17);
+  opacity: 1;
+} */
+
+/* .menu_li:active {
+  top: 422px;
+  left: 602px;
+  width: 61px;
+  height: 21px;
+  text-align: left;
+  font: normal normal medium 15px/23px Poppins;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: black;
+  opacity: 1;
+} */
+
+.main_form {
+  height: 56px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.699999988079071px solid #c8c1df;
+  border-radius: 5px;
+}
+
+.profile_label3 {
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: hsl(252, 51%, 39%);
+  float: left;
+}
+
+.form_sub_stream {
+  margin-bottom: 10px;
+}
+
+.form_sub_stream > input {
+  padding: 10px;
+}
+
+.form_sub_stream > select {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #c8c1df;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form_input_sm {
+  width: 83%;
+}
+
+/* .modal-content {
+  width: 700px;
+} */
+
+.modal-body {
+  width: 700px;
+}
+
+.card_1 {
+  background-color: #35b0a7;
+  border-radius: 15px;
+  height: 130px;
+}
+.card_3_transaction {
+  background-color: #35b0a7;
+  border-radius: 15px;
+  height: 130px;
+}
+
+.card_1 .img1 {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.card_2 {
+  background-color: #8e44ad;
+  border-radius: 15px;
+  height: 130px;
+}
+
+.card_2 .img2 {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.card_3 {
+  background-color: #321f39;
+  border-radius: 15px;
+  height: 130px;
+}
+.card_4 {
+  background-color: #cd3d09;
+  border-radius: 15px;
+  height: 130px;
+}
+
+.card_3 .img3 {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .registration_div {
+    padding: 10px;
+  }
+
+  .profile_bt_sm {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form_input_sm {
+    width: 97%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
+  .modal-body {
+    width: 100%;
+  }
+
+  .card_body_sm {
+    width: 290px;
+    overflow: scroll;
+  }
+}

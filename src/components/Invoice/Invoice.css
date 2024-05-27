@@ -1,0 +1,59 @@
+#invoice .payment-info p {
+  font-size: 11px !important;
+}
+#invoice .booking-table p {
+  font-size: 11px !important;
+  border-radius: 2px 2px 0px 0px;
+}
+#invoice .total-amount-right p {
+  font-size: 11px !important;
+  margin-top: 5px;
+}
+#invoice .total-amount-right div p:nth-child(1) {
+  color: #35b0a7;
+}
+#invoice .paid-amount {
+  font-size: 12px !important;
+}
+/* #invoice .total-amount-left p {
+  margin-top: 2px;
+} */
+.note-area textarea {
+  border: 1px solid #35b0a7;
+  border-radius: 5px;
+}
+.note-area textarea:focus {
+  outline: none;
+}
+.note-area label {
+  font-size: 11px !important;
+  line-height: 0;
+}
+.signature p {
+  font-size: 11px !important;
+}
+.invoice-footer p {
+  font-size: 11px !important;
+}
+
+.grid-container {
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.col-span-1 {
+  flex: 1;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.ml-10 {
+  margin-left: 1rem;
+}

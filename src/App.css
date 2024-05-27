@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.content-wrapper {
+  padding: 10px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+button {
+  height: 54px;
+  background: #463196 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+thead {
+  background-color: #c4bfdf;
+}
+
+.menu_li {
+  font-size: 15px;
+}
+
+th {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+::-webkit-file-upload-button {
+  background: #c8c1df;
+  color: #0f0c1a;
+  padding: 1em;
+  border: none;
+}
+
+#pageDropDown {
+  width: 62px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #c8c1df;
+  border-radius: 5px;
+  color: #939198;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.customize {
+  padding: 0 3rem;
+  margin: 0px 5rem;
+}
+
+.customize_list {
+  margin: 0px 5rem;
+}
+
+.bar_menu_sm {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_main_nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home_card_m {
+    margin: 1rem 0px;
+  }
+
+  .bar_menu_sm {
+    display: block;
+  }
+
+  .customize {
+    padding: 0px;
+    margin: 0px 0px;
+  }
+
+  .customize_list {
+    margin: 0px 0px;
+  }
+
+  ::-webkit-file-upload-button {
+    background: #c8c1df;
+    color: #0f0c1a;
+    padding: 1em;
+    border: none;
+  }
+
+  #pageDropDown {
+    width: 62px;
+    margin-bottom: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #c8c1df;
+    border-radius: 5px;
+    color: #939198;
+  }
+}
+
+.custom-container {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+}

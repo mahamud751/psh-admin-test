@@ -1,0 +1,37 @@
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: white !important;
+}
+
+.pagination button {
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 30px;
+}
+.page-selected {
+  background-color: red;
+  color: white;
+}
+.order-status {
+  cursor: pointer;
+}
+.update-date {
+  cursor: pointer;
+}
+.calcaulation span {
+  cursor: pointer;
+}
+.dmyActive {
+  background-color: #35b0a7;
+  color: white;
+}
+.filtering-part {
+  display: flex !important;
+}
+@media (max-width: 576px) {
+  .flex-sm-column {
+    flex-direction: column !important;
+  }
+  .customize {
+    margin: 0 !important;
+  }
+}

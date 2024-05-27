@@ -1,0 +1,13 @@
+import { useEffect, useState } from "react";
+
+const usePromo = () => {
+  const [promos, setPromos] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.psh.com.bd/api/promo`)
+      .then((res) => res.json())
+      .then((data) => setPromos(data));
+  }, []);
+  return [promos];
+};
+export default usePromo;
